@@ -1,7 +1,8 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## makeCachematrix creates a matrix object with the possibility of caching its
+## inverse in the field inv. Access methods are defined as a list. 
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
@@ -18,7 +19,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve computes the inverse of a matrix object. If the inverse has been
+## cached, it returns that value. Otherwise it computes the inverse using solve,
+## stores it in the inv field of the matrix object, and returns the value.
 
 cacheSolve <- function(x, ...) {
   inv <- x$getinverse()
