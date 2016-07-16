@@ -1,8 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## We define a "matrix" object that can cache its inverse, and an inversion
+## method which, before performing the inversion, checks whether it has already
+## been computed, and returns the cached value in that case 
 
-## makeCachematrix creates a matrix object with the possibility of caching its
-## inverse in the field inv. Access methods are defined as a list. 
+## makeCachematrix creates a matrix "object" with the possibility of caching its
+## inverse in the field inv. Access methods are defined as a list.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv <- NULL
